@@ -61,7 +61,7 @@ const FloatingBottomNav = ({ activeSection }: { activeSection: string }) => (
     style={{ boxShadow: "0 0 30px rgba(124, 58, 237, 0.25)" }}
   >
     {navItems.map((item) => {
-      const isActive = activeSection === item.id;
+      const isActive = activeSection === item.id || (item.id === "download" && activeSection === "cta");
       const Icon = item.icon;
       const content = (
         <div className="relative flex flex-col items-center gap-0.5 px-3 py-1.5">
